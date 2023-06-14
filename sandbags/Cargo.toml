@@ -1,0 +1,18 @@
+[package]
+name = "sandbags"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+aya = { workspace = true }
+aya-log = { workspace = true }
+bytes = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+eyre = { workspace = true }
+thiserror = { workspace = true }
+tokio-util = { workspace = true }
+
+[build-dependencies]
+bpf-build = { path = "../bpf-build" }

@@ -1,0 +1,29 @@
+[workspace]
+members = ["bpf-build", "sandbags", "sandbags-play"]
+
+[profile.release]
+lto = true
+
+[workspace.dependencies]
+aya = { git = "https://github.com/aya-rs/aya", rev = "9cdae8126573e598284f7dc3f6fff2f97a48cc02" }
+aya-log = { git = "https://github.com/aya-rs/aya", rev = "9cdae8126573e598284f7dc3f6fff2f97a48cc02" }
+tokio = { version = "1", default-features = false, features = [
+    "macros",
+    "rt",
+    "process",
+    "io-util",
+    "io-std",
+    "time",
+    "signal",
+    "sync",
+    "fs",
+] }
+thiserror = "1.0.21"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+camino = "1.1.4"
+eyre = "0.6.8"
+structopt = "0.3.26"
+tokio-util = { version = "0.7.8" }
+libc = { version = "0.2", features = ["extra_traits", "std"] }
+bytes = "1.4.0"

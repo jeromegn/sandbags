@@ -1,0 +1,12 @@
+[package]
+name = "sandbags-play"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+
+[dependencies]
+sandbags = { path = "../sandbags" }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
